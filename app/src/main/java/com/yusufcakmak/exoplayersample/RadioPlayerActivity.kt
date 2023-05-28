@@ -1,15 +1,16 @@
 package com.yusufcakmak.exoplayersample
 
+import android.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.source.DefaultMediaSourceFactory
-import com.google.android.exoplayer2.source.MediaSourceFactory
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultDataSource
 import com.yusufcakmak.exoplayersample.databinding.ActivityRadioPlayerBinding
+
 
 class RadioPlayerActivity : AppCompatActivity() {
 
@@ -22,8 +23,7 @@ class RadioPlayerActivity : AppCompatActivity() {
         binding = ActivityRadioPlayerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        prepareMediaPlayer()
-        initListeners()
+//        initListeners()
     }
 
     private fun prepareMediaPlayer() {
@@ -43,15 +43,15 @@ class RadioPlayerActivity : AppCompatActivity() {
         simpleExoPlayer.prepare()
     }
 
-    private fun initListeners() {
-        binding.btnStart.setOnClickListener {
-            simpleExoPlayer.playWhenReady = true
-        }
-
-        binding.btnStop.setOnClickListener {
-            simpleExoPlayer.playWhenReady = false
-        }
-    }
+//    private fun initListeners() {
+//        binding.btnStart.setOnClickListener {
+//            simpleExoPlayer.playWhenReady = true
+//        }
+//
+//        binding.btnStop.setOnClickListener {
+//            simpleExoPlayer.playWhenReady = false
+//        }
+//    }
 
     override fun onDestroy() {
         simpleExoPlayer.playWhenReady = false

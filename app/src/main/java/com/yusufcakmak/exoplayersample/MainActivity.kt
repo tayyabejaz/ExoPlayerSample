@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnVideoPlayer.setOnClickListener {
-            val intent = Intent(this@MainActivity, VideoPlayerActivity::class.java)
-            startActivity(intent)
+        val intent = Intent(this@MainActivity, VideoPlayerActivity::class.java)
+        startActivity(intent)
+        finish()
         }
     }
 
